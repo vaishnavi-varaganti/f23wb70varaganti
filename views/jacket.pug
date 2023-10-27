@@ -9,3 +9,9 @@ block content
         div(class="col-sm-2")
           h6 Jacket #{index + 1}
           p #{jacket.size} - #{jacket.color} - #{jacket.price}
+          div(onclick=`buy(${index})`, class="btn btn-primary") Buy
+  
+  script. 
+    function buy(index) {
+      alert(`You purchased item ${index + 1}`);
+    }
